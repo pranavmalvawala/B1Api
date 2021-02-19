@@ -7,7 +7,7 @@ import { UserInterface, ChurchInterface } from "../helpers";
 @controller("/churches")
 export class ChurchController extends B1BaseController {
 
-    async validateInit(churchId: number) {
+    async validateInit(churchId: string) {
         const errors = [];
         console.log(churchId);
         const pages = await this.baseRepositories.page.loadAll(churchId);
