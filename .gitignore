@@ -1,5 +1,5 @@
 *.bat
-
+/content/
 
 # Logs
 logs

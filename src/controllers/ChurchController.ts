@@ -25,7 +25,7 @@ export class ChurchController extends B1BaseController {
             const errors = await this.validateInit(au.churchId);
             if (errors.length > 0) return this.denyAccess(errors);
             else {
-                let page: Page = { churchId: au.churchId, content: "Welcome to " + req.body.church.name, name: "Home" };
+                let page: Page = { churchId: au.churchId, content: "Welcome to " + req.body.church.name, name: "Home", path: "" };
                 page = await this.baseRepositories.page.save(page);
 
                 const promises: Promise<any>[] = [];
